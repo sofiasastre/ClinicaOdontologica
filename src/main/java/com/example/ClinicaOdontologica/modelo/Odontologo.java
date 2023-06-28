@@ -18,9 +18,6 @@ public class Odontologo {
     @JsonIgnore //Para que no entre el un loop
     private Set<Turno> turnos;
 
-    //Constructor
-
-
     //Getters y Setters
 
     public Set<Turno> getTurnos() {
