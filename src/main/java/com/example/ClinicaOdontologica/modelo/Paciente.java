@@ -1,15 +1,26 @@
 package com.example.ClinicaOdontologica.modelo;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
+import javax.persistence.*;
 import java.util.Date;
 import java.util.Set;
 
+@Entity
+@Table(name="pacientes")
 public class Paciente {
+    @Id
+    @GeneratedValue //Para que se autogenere
     private Integer id;
     private String nombre;
     private String apellido;
     private Date fechaIngreso;
     private String dni;
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "domicilio_id")
     private Domicilio domicilio;
+    @OneToMany(mappedBy = "paciente")
+    @JsonIgnore //Para que no entre en el loop
     private Set<Turno> turnos;
 
     //Constructor
@@ -74,7 +85,6 @@ public class Paciente {
     }
 
     //toString
-
     @Override
     public String toString() {
         return "Paciente{" +

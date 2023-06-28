@@ -1,16 +1,24 @@
 package com.example.ClinicaOdontologica.modelo;
 
-import java.util.Set;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
+import java.util.Set;
+import javax.persistence.*;
+
+@Entity
+@Table(name="odontologos")
 public class Odontologo {
+    @Id
+    @GeneratedValue //Para que se autogenere
     private Integer id;
     private String nombre;
     private String apellido;
     private Integer matricula;
-
+    @OneToMany(mappedBy = "odontologo")
+    @JsonIgnore //Para que no entre el un loop
     private Set<Turno> turnos;
 
-    //Contstructor
+    //Constructor
 
 
     //Getters y Setters
