@@ -26,9 +26,8 @@ public class OdontologoService implements IOdontologoService{
     public OdontologoDTO leerOdontologo(Integer id) {
         Optional<Odontologo> odontologo = odontologoRepository.findById(id);
         OdontologoDTO odontologoDTO = null;
-        if(odontologo.isPresent())
-            odontologoDTO = mapper.convertValue(odontologo, OdontologoDTO.class);
-
+        if (odontologo.isPresent())
+            odontologoDTO = mapper.convertValue(odontologo.get(), OdontologoDTO.class);
         return odontologoDTO;
     }
     private void guardarOdontologo(OdontologoDTO odontologoDTO){
