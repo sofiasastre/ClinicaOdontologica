@@ -25,6 +25,26 @@ public class Paciente {
 
     //Constructor
 
+    public Paciente(Integer id, String nombre, String apellido, Date fechaIngreso, String dni, Domicilio domicilio, Set<Turno> turnos) {
+        this.id = id;
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.fechaIngreso = fechaIngreso;
+        this.dni = dni;
+        this.domicilio = domicilio;
+        this.turnos = turnos;
+    }
+
+    public Paciente(String nombre, String apellido, Date fechaIngreso, String dni, Domicilio domicilio, Set<Turno> turnos) {
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.fechaIngreso = fechaIngreso;
+        this.dni = dni;
+        this.domicilio = domicilio;
+        this.turnos = turnos;
+    }
+    public Paciente() {
+    }
 
     //Getters y Setters
 

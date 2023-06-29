@@ -4,6 +4,7 @@ public class OdontologoDTO {
     private Integer id;
     private String nombre;
     private String apellido;
+    private String matricula;
 
     //Getters y Setters
 
@@ -13,6 +14,14 @@ public class OdontologoDTO {
 
     public void setId(Integer id) {
         this.id = id;
+    }
+
+    public String getMatricula() {
+        return matricula;
+    }
+
+    public void setMatricula(String matricula) {
+        this.matricula = matricula;
     }
 
     public String getNombre() {

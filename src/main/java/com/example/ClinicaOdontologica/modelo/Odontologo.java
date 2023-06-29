@@ -13,7 +13,7 @@ public class Odontologo {
     private Integer id;
     private String nombre;
     private String apellido;
-    private Integer matricula;
+    private String matricula;
     @OneToMany(mappedBy = "odontologo")
     @JsonIgnore //Para que no entre el un loop
     private Set<Turno> turnos;
@@ -52,11 +52,11 @@ public class Odontologo {
         this.apellido = apellido;
     }
 
-    public Integer getMatricula() {
+    public String getMatricula() {
         return matricula;
     }
 
-    public void setMatricula(Integer matricula) {
+    public void setMatricula(String matricula) {
         this.matricula = matricula;
     }
 
