@@ -7,6 +7,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Collection;
+
 @RestController
 @RequestMapping("/odontologos")
 public class OdontologoController {
@@ -29,5 +31,16 @@ public class OdontologoController {
     public ResponseEntity<?> modificarOdontologo(@RequestBody OdontologoDTO odontologoDTO){
         odontologoService.modificarOdontologo(odontologoDTO);
         return ResponseEntity.ok(HttpStatus.OK);
+    }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<?> eliminarOdontologo(@PathVariable Integer id){
+        odontologoService.eliminarOdontologo(id);
+        return ResponseEntity.ok(HttpStatus.OK);
+    }
+
+    @GetMapping
+    public Collection<OdontologoDTO> getTodosOdontologos(){
+        return odontologoService.getTodos();
     }
 }

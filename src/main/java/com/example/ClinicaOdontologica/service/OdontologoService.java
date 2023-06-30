@@ -1,17 +1,14 @@
 package com.example.ClinicaOdontologica.service;
-
 import com.example.ClinicaOdontologica.modelo.Odontologo;
 import com.example.ClinicaOdontologica.modelo.OdontologoDTO;
 import com.example.ClinicaOdontologica.repository.IOdontologoRepository;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import java.util.HashSet;
 import java.util.List;
 import java.util.Optional;
 import java.util.Set;
-
 @Service
 public class OdontologoService implements IOdontologoService{
     @Autowired
@@ -52,4 +49,3 @@ public class OdontologoService implements IOdontologoService{
         return odontologoDTOS;
     }
 }
-
