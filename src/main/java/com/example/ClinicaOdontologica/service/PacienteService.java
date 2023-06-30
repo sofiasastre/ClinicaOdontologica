@@ -24,10 +24,13 @@ public class PacienteService implements IPacienteService{
     }
     @Override
     public PacienteDTO leerPaciente(Integer id) {
-        Optional<Paciente> paciente = pacienteRepository.findById(id);
+        Optional<Paciente> pacienteOptional = pacienteRepository.findById(id);
         PacienteDTO pacienteDTO = null;
-        if(paciente.isPresent())
+        if(pacienteOptional.isPresent()){
+            Paciente paciente = pacienteOptional.get();
             pacienteDTO = mapper.convertValue(paciente, PacienteDTO.class);
+        }
+
 
         return pacienteDTO;
     }

@@ -8,6 +8,20 @@ public class TurnoDTO {
     private Odontologo odontologo;
     private Date date;
 
+    //Constructores
+    public TurnoDTO(Integer id, Paciente paciente, Odontologo odontologo, Date date) {
+        this.id = id;
+        this.paciente = paciente;
+        this.odontologo = odontologo;
+        this.date = date;
+    }
+
+    public TurnoDTO(Paciente paciente, Odontologo odontologo, Date date) {
+        this.paciente = paciente;
+        this.odontologo = odontologo;
+        this.date = date;
+    }
+
     //Getters y Setters
     public Integer getId() {
         return id;

@@ -20,6 +20,18 @@ public class Turno {
 
     //Constructor
 
+    public Turno(Integer id, Paciente paciente, Odontologo odontologo, Date date) {
+        this.id = id;
+        this.paciente = paciente;
+        this.odontologo = odontologo;
+        this.date = date;
+    }
+
+    public Turno(Paciente paciente, Odontologo odontologo, Date date) {
+        this.paciente = paciente;
+        this.odontologo = odontologo;
+        this.date = date;
+    }
 
     //Getters y Setters
 
