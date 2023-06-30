@@ -1,0 +1,1 @@
+ERROR	2023-06-30 01:23:11,692	0	com.example.ClinicaOdontologica.GlobalExceptionHandler	[http-nio-8080-exec-1]	Failed to convert value of type 'java.lang.String' to required type 'java.lang.Integer'; nested exception is java.lang.NumberFormatException: For input string: "p"
