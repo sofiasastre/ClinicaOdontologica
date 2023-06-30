@@ -1,26 +1,15 @@
 package com.example.ClinicaOdontologica.modelo;
 
+import java.time.LocalDate;
 import java.util.Date;
 
 public class TurnoDTO {
     private Integer id;
     private Paciente paciente;
     private Odontologo odontologo;
-    private Date date;
+    private LocalDate date;
 
     //Constructores
-    public TurnoDTO(Integer id, Paciente paciente, Odontologo odontologo, Date date) {
-        this.id = id;
-        this.paciente = paciente;
-        this.odontologo = odontologo;
-        this.date = date;
-    }
-
-    public TurnoDTO(Paciente paciente, Odontologo odontologo, Date date) {
-        this.paciente = paciente;
-        this.odontologo = odontologo;
-        this.date = date;
-    }
 
     //Getters y Setters
     public Integer getId() {
@@ -47,11 +36,11 @@ public class TurnoDTO {
         this.odontologo = odontologo;
     }
 
-    public Date getDate() {
+    public LocalDate getDate() {
         return date;
     }
 
-    public void setDate(Date date) {
+    public void setDate(LocalDate date) {
         this.date = date;
     }
 }
