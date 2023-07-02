@@ -1,7 +1,9 @@
 package com.example.ClinicaOdontologica.service;
 
 import com.example.ClinicaOdontologica.modelo.PacienteDTO;
+import com.example.ClinicaOdontologica.modelo.TurnoDTO;
 
+import java.util.List;
 import java.util.Set;
 
 public interface IPacienteService {

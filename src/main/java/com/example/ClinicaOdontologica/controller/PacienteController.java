@@ -1,9 +1,10 @@
 package com.example.ClinicaOdontologica.controller;
 
-
 import com.example.ClinicaOdontologica.modelo.PacienteDTO;
 import com.example.ClinicaOdontologica.service.IPacienteService;
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -13,6 +14,9 @@ import java.util.Collection;
 @RestController
 @RequestMapping("/pacientes")
 public class PacienteController {
+
+    private static final Logger logger = Logger.getLogger(PacienteController.class);
+
     @Autowired
     private IPacienteService pacienteService;
 
@@ -35,9 +39,17 @@ public class PacienteController {
 
     @DeleteMapping("/{id}")
     public ResponseEntity<?> eliminarPaciente(@PathVariable Integer id){
-        pacienteService.eliminarPaciente(id);
-        return ResponseEntity.ok(HttpStatus.OK);
+        try {
+            pacienteService.eliminarPaciente(id);
+            String mensaje = "Se eliminó correctamente el paciente con ID: " + id;
+            logger.info(mensaje);
+            return ResponseEntity.ok(mensaje);
+        } catch (EmptyResultDataAccessException ex) {
+            logger.info("No se encontró ningún paciente con el ID: " + id);
+            return ResponseEntity.notFound().build();
+        }
     }
+
 
     @GetMapping
     public Collection<PacienteDTO> getTodosPacientes(){

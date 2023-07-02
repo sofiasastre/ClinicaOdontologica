@@ -1,1 +1,23 @@
 ERROR	2023-06-30 01:23:11,692	0	com.example.ClinicaOdontologica.GlobalExceptionHandler	[http-nio-8080-exec-1]	Failed to convert value of type 'java.lang.String' to required type 'java.lang.Integer'; nested exception is java.lang.NumberFormatException: For input string: "p"
+ERROR	2023-06-30 01:30:08,476	0	com.example.ClinicaOdontologica.GlobalExceptionHandler	[http-nio-8080-exec-2]	Failed to convert value of type 'java.lang.String' to required type 'java.lang.Integer'; nested exception is java.lang.NumberFormatException: For input string: "p"
+[2023-06-30 01:34:40] [ERROR] [GlobalExceptionHandler:19] Failed to convert value of type 'java.lang.String' to required type 'java.lang.Integer'; nested exception is java.lang.NumberFormatException: For input string: "p"
+[2023-06-30 01:36:02] [ERROR] [GlobalExceptionHandler:19] Failed to convert value of type 'java.lang.String' to required type 'java.lang.Integer'; nested exception is java.lang.NumberFormatException: For input string: "p"
+[2023-06-30 01:43:36] [INFO ] [PacienteController:47] No se encontró ningún paciente con el ID: 1
+[2023-06-30 01:47:41] [INFO ] [PacienteController:48] No se encontró ningún paciente con el ID: 5
+[2023-06-30 01:47:45] [INFO ] [PacienteController:48] No se encontró ningún paciente con el ID: 5
+[2023-06-30 01:48:14] [INFO ] [PacienteController:48] No se encontró ningún paciente con el ID: 1
+[2023-06-30 01:50:14] [ERROR] [PacienteController:49] No se encontró ningún paciente con el ID: 1
+[2023-06-30 01:50:16] [ERROR] [PacienteController:49] No se encontró ningún paciente con el ID: 1
+[2023-06-30 01:54:25] [INFO ] [PacienteController:49] No se encontró ningún paciente con el ID: 1
+[2023-06-30 01:54:40] [INFO ] [PacienteController:49] No se encontró ningún paciente con el ID: 15
+[2023-06-30 01:55:03] [ERROR] [GlobalExceptionHandler:19] could not execute statement; SQL [n/a]; constraint ["FK4OKCQR9IQT2IW6XHY1PPSMO3L: PUBLIC.TURNOS FOREIGN KEY(PACIENTE_ID) REFERENCES PUBLIC.PACIENTES(ID) (10)"; SQL statement:
+delete from pacientes where id=? [23503-214]]; nested exception is org.hibernate.exception.ConstraintViolationException: could not execute statement
+[2023-06-30 02:06:03] [ERROR] [GlobalExceptionHandler:19] not-null property references a null or transient value : com.example.ClinicaOdontologica.modelo.Turno.paciente; nested exception is org.hibernate.PropertyValueException: not-null property references a null or transient value : com.example.ClinicaOdontologica.modelo.Turno.paciente
+[2023-06-30 02:07:35] [INFO ] [PacienteController:46] Se eliminó correctamente el paciente con ID: 10
+[2023-06-30 02:09:00] [INFO ] [PacienteController:46] Se eliminó correctamente el paciente con ID: 6y todos sus turnos relacionados
+[2023-06-30 02:18:22] [INFO ] [PacienteController:49] Se eliminó correctamente el paciente con ID: 7 y los siguientes turnos: []
+[2023-06-30 02:19:10] [ERROR] [GlobalExceptionHandler:19] Unable to find com.example.ClinicaOdontologica.modelo.Paciente with id 10; nested exception is javax.persistence.EntityNotFoundException: Unable to find com.example.ClinicaOdontologica.modelo.Paciente with id 10
+[2023-06-30 02:19:41] [ERROR] [GlobalExceptionHandler:19] Unable to find com.example.ClinicaOdontologica.modelo.Odontologo with id 3; nested exception is javax.persistence.EntityNotFoundException: Unable to find com.example.ClinicaOdontologica.modelo.Odontologo with id 3
+[2023-06-30 02:19:45] [ERROR] [GlobalExceptionHandler:19] Unable to find com.example.ClinicaOdontologica.modelo.Odontologo with id 4; nested exception is javax.persistence.EntityNotFoundException: Unable to find com.example.ClinicaOdontologica.modelo.Odontologo with id 4
+[2023-06-30 02:20:16] [INFO ] [PacienteController:49] Se eliminó correctamente el paciente con ID: 8 y los siguientes turnos: [com.example.ClinicaOdontologica.modelo.TurnoDTO@2f8c9981, com.example.ClinicaOdontologica.modelo.TurnoDTO@3a905342]
+[2023-06-30 02:28:03] [ERROR] [GlobalExceptionHandler:19] 200 OK "Se eliminó correctamente el paciente con ID: 8 y no se encontraron turnos relacionados."
