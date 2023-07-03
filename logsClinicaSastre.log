@@ -30,3 +30,5 @@ delete from pacientes where id=? [23503-214]]; nested exception is org.hibernate
 [2023-07-02 23:37:39] [ERROR] [GlobalExceptionHandler:19] No class com.example.ClinicaOdontologica.modelo.Odontologo entity with id 2 exists!
 [2023-07-03 00:02:59] [ERROR] [GlobalExceptionHandler:19] No class com.example.ClinicaOdontologica.modelo.Odontologo entity with id 7 exists!
 [2023-07-03 17:06:39] [ERROR] [GlobalExceptionHandler:19] 200 OK "Se eliminó correctamente el paciente con ID: 18 y no se encontraron turnos relacionados."
+[2023-07-03 20:23:29] [ERROR] [GlobalExceptionHandler:19] 200 OK "Se eliminó correctamente el paciente con ID: 2 y no se encontraron turnos relacionados."
+[2023-07-03 20:54:23] [ERROR] [GlobalExceptionHandler:19] 200 OK "Se eliminó correctamente el paciente con ID: 3 y no se encontraron turnos relacionados."

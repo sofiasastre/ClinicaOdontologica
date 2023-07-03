@@ -5,7 +5,7 @@ window.addEventListener('load', function(){
             nombre: document.querySelector('#nombre').value,
             apellido: document.querySelector('#apellido').value,
             dni: document.querySelector('#dni').value,
-            fechaDeIngreso: document.querySelector('#fechaDeIngreso').value,
+            fechaIngreso: document.querySelector('#fechaIngreso').value,
             domicilio:{
                 calle:document.querySelector('#calle').value,
                 numero:document.querySelector('#numero').value,
@@ -46,7 +46,7 @@ window.addEventListener('load', function(){
         document.querySelector('#nombre').value = "";
         document.querySelector('#apellido').value = "";
         document.querySelector('#dni').value = "";
-        document.querySelector('#fechaDeIngreso').value = "";
+        document.querySelector('#fechaIngreso').value = "";
     }
     (function(){
         let pathname = window.location.pathname;

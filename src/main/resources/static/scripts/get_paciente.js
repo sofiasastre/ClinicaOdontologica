@@ -31,7 +31,7 @@ window.addEventListener('load', function() {
                         '<td class="td_nombre">' + paciente.nombre.toUpperCase() + '</td>' +
                         '<td class="td_apellido">' + paciente.apellido.toUpperCase() + '</td>' +
                         '<td class="td_dni">' + paciente.dni + '</td>' +
-                        '<td class="td_fecha"> FECHA DE INGRESO </td>' +
+                        '<td class="td_fechaIngreso">'+paciente.fechaIngreso +' </td>' +
                         '<td class="td_domicilio"> ' + paciente.domicilio.calle + ' ' + paciente.domicilio.numero + '</td>' +
                         '<td class="td_localidad"> ' + paciente.domicilio.localidad + '</td>' +
                         '<td class="td_provincia"> ' + paciente.domicilio.provincia + '</td>' +
