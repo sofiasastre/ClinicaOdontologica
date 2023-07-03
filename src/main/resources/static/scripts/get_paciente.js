@@ -20,18 +20,21 @@ window.addEventListener('load', function() {
                         '&times;' +
                         '</button>';
 
-                    let updateButton = '<button ' +
-                        'id="' + 'btn_id_' + paciente.id + '" ' +
-                        'type="button" onclick="findBy(' + paciente.id + ')" class="btn btn-info btn_id">' +
-                        paciente.id +
-                        '</button>';
+                   let updateButton = '<button ' +
+                       'id="' + 'btn_id_' + paciente.id + '" ' +
+                       'type="button" onclick="findBy(' + paciente.id + ')" class="btn btn-info btn_id">' +
+                       paciente.id +
+                       '</button>';
 
                     pacienteRow.innerHTML =
                         '<td>' + updateButton + '</td>' +
                         '<td class="td_nombre">' + paciente.nombre.toUpperCase() + '</td>' +
                         '<td class="td_apellido">' + paciente.apellido.toUpperCase() + '</td>' +
                         '<td class="td_dni">' + paciente.dni + '</td>' +
-                        '<td class="td_fecha">' + paciente.fechaDeIngreso + '</td>' +
+                        '<td class="td_fecha"> FECHA DE INGRESO </td>' +
+                        '<td class="td_domicilio"> ' + paciente.domicilio.calle + ' ' + paciente.domicilio.numero + '</td>' +
+                        '<td class="td_localidad"> ' + paciente.domicilio.localidad + '</td>' +
+                        '<td class="td_provincia"> ' + paciente.domicilio.provincia + '</td>' +
                         '<td>' + deleteButton + '</td>';
                 }
             })

@@ -27,48 +27,41 @@ window.addEventListener("load", function() {
         };
 
         fetch(url, settings)
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error('Network response was not ok');
-                }
-                return response.json();
-            })
+            .then(response => response.json())
             .then(data => {
-                let successAlert = '<div class="alert alert-success alert-dismissible">' +
-                    '<button type="button" class="close" data-dismiss="alert">&times;</button>' +
-                    '<strong></strong>Paciente actualizado </div>';
-
-                document.querySelector('#response').innerHTML = successAlert;
-                document.querySelector('#response').style.display = "block";
-                resetUploadForm();
+                // Aquí puedes manejar la respuesta del servidor si es necesario
             })
             .catch(error => {
-                let errorAlert = '<div class="alert alert-danger alert-dismissible">' +
-                    '<button type="button" class="close" data-dismiss="alert">&times;</button>' +
-                    '<strong></strong>Error intente nuevamente</div>';
-
-                document.querySelector('#response').innerHTML = errorAlert;
-                document.querySelector('#response').style.display = "block";
+                alert("Error: " + error);
             });
     });
-
-    function resetUploadForm() {
-        document.querySelector('#nombre').value = "";
-        document.querySelector('#apellido').value = "";
-        document.querySelector('#dni').value = "";
-        document.querySelector('#fechaDeIngreso').value = "";
-        document.querySelector('#calle').value = "";
-        document.querySelector('#numero').value = "";
-        document.querySelector('#localidad').value = "";
-        document.querySelector('#provincia').value = "";
-    }
-
-    (function() {
-        let pathname = window.location.pathname;
-        if (pathname === "/") {
-            document.querySelector("nav .nav-item a:first").classList.add("active");
-        } else if (pathname === "/pacienteList.html") {
-            document.querySelector("nav .nav-item a:last").classList.add("active");
-        }
-    })();
 });
+
+function findBy(id){
+    const url = '/pacientes/' + id;
+    const settings = {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    };
+    fetch(url, settings)
+        .then(response => response.json())
+        .then(data => {
+            let paciente = data;
+            document.querySelector('#paciente_id').value = paciente.id;
+            document.querySelector('#nombre').value = paciente.nombre;
+            document.querySelector('#apellido').value = paciente.apellido;
+            document.querySelector('#dni').value = paciente.dni;
+            document.querySelector('#fechaDeIngreso').value = paciente.fechaDeIngreso;
+            document.querySelector('#calle').value = paciente.domicilio.calle;
+            document.querySelector('#numero').value = paciente.domicilio.numero;
+            document.querySelector('#localidad').value = paciente.domicilio.localidad;
+            document.querySelector('#provincia').value = paciente.domicilio.provincia;
+
+            document.querySelector('#div_paciente_updating').style.display = 'block';
+        })
+        .catch(error => {
+            alert("Error: " + error);
+        });
+}
