@@ -1,0 +1,67 @@
+/* Estilos generales */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+}
+
+.container {
+  margin-top: 20px;
+}
+
+/* Estilos para la tabla de odontólogos */
+#odontologoTable {
+  margin-top: 20px;
+}
+
+/* Estilos para los formularios */
+.form-group {
+  margin-bottom: 10px;
+}
+
+#div_odontologo_updating {
+  margin-top: 20px;
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 3px;
+}
+
+/* Estilos para los botones */
+.btn {
+  margin-right: 5px;
+}
+
+/* Estilos para el encabezado */
+h1 {
+  margin-top: 30px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Estilos para la barra de navegación */
+.nav-pills {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.nav-item {
+  margin-right: 10px;
+}
+
+/* Estilos para los enlaces */
+a.nav-link {
+  color: #333;
+}
+
+a.nav-link:hover {
+  color: #007bff;
+  text-decoration: none;
+}
+
+/* Estilos para la respuesta del formulario */
+#response {
+  margin-top: 10px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+}
+

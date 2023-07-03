@@ -21,3 +21,11 @@ delete from pacientes where id=? [23503-214]]; nested exception is org.hibernate
 [2023-06-30 02:19:45] [ERROR] [GlobalExceptionHandler:19] Unable to find com.example.ClinicaOdontologica.modelo.Odontologo with id 4; nested exception is javax.persistence.EntityNotFoundException: Unable to find com.example.ClinicaOdontologica.modelo.Odontologo with id 4
 [2023-06-30 02:20:16] [INFO ] [PacienteController:49] Se eliminó correctamente el paciente con ID: 8 y los siguientes turnos: [com.example.ClinicaOdontologica.modelo.TurnoDTO@2f8c9981, com.example.ClinicaOdontologica.modelo.TurnoDTO@3a905342]
 [2023-06-30 02:28:03] [ERROR] [GlobalExceptionHandler:19] 200 OK "Se eliminó correctamente el paciente con ID: 8 y no se encontraron turnos relacionados."
+[2023-07-02 22:37:57] [ERROR] [GlobalExceptionHandler:19] No class com.example.ClinicaOdontologica.modelo.Odontologo entity with id 29 exists!
+[2023-07-02 22:42:31] [ERROR] [GlobalExceptionHandler:19] No class com.example.ClinicaOdontologica.modelo.Odontologo entity with id 38 exists!
+[2023-07-02 22:46:39] [ERROR] [GlobalExceptionHandler:19] No class com.example.ClinicaOdontologica.modelo.Odontologo entity with id 1 exists!
+[2023-07-02 22:46:58] [ERROR] [GlobalExceptionHandler:19] No class com.example.ClinicaOdontologica.modelo.Odontologo entity with id 1 exists!
+[2023-07-02 22:50:15] [ERROR] [GlobalExceptionHandler:19] No class com.example.ClinicaOdontologica.modelo.Odontologo entity with id 1 exists!
+[2023-07-02 23:32:59] [ERROR] [GlobalExceptionHandler:19] No class com.example.ClinicaOdontologica.modelo.Odontologo entity with id 1 exists!
+[2023-07-02 23:37:39] [ERROR] [GlobalExceptionHandler:19] No class com.example.ClinicaOdontologica.modelo.Odontologo entity with id 2 exists!
+[2023-07-03 00:02:59] [ERROR] [GlobalExceptionHandler:19] No class com.example.ClinicaOdontologica.modelo.Odontologo entity with id 7 exists!
