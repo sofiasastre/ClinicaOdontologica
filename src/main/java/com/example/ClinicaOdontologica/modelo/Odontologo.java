@@ -6,7 +6,7 @@ import javax.persistence.*;
 @Table(name="odontologos")
 public class Odontologo {
     @Id
-    @GeneratedValue //Para que se autogenere
+    @GeneratedValue(strategy = GenerationType.IDENTITY)  //Para que se autogenere
     private Integer id;
     private String nombre;
     private String apellido;

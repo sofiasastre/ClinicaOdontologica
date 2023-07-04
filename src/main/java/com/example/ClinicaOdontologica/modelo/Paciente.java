@@ -7,7 +7,7 @@ import java.util.Set;
 @Table(name="pacientes")
 public class Paciente {
     @Id
-    @GeneratedValue //Para que se autogenere
+    @GeneratedValue(strategy = GenerationType.IDENTITY) //Para que se autogenere
     private Integer id;
     private String nombre;
     private String apellido;

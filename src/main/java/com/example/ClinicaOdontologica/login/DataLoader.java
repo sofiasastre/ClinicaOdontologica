@@ -24,8 +24,8 @@ public class DataLoader implements ApplicationRunner {
         String password = passwordEncoder.encode("Sofi");
         String password2 = passwordEncoder.encode("Augus");
         //Comento para que no se cree dos veces
-        //userRepository.save(new AppUser("Sofia","Sastre","a@a.com",password,AppUsuarioRoles.ADMIN));
-        //userRepository.save(new AppUser("Augusto","Drocchi","a@a.com",password2,AppUsuarioRoles.USER));
+        userRepository.save(new AppUser("Sofia","Sastre","a@a.com",password,AppUsuarioRoles.ADMIN));
+        userRepository.save(new AppUser("Augusto","Drocchi","a@a.com",password2,AppUsuarioRoles.USER));
 
     }
 }

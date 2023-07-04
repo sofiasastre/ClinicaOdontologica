@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Administración de Turnos</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../webapp/css/bootstrap.min.css">
+    <script type="text/javascript" src="scripts/post_turno.js"></script>
+</head>
+<body>
+<div class="container">
+    <ul class="nav nav-pills">
+        <li class="nav-item">
+            <a class="nav-link" href="index.html">Atrás</a>
+        </li>
+    </ul>
+    <div class="row">
+        <div class="col-sm-7" style="">
+            <h3>Agregar Turno</h3>
+            <form id="add_new_turno">
+                <div class="form-group">
+                    <label class="control-label" for="date">Fecha:</label>
+                    <input type="date" class="form-control" id="date" name="date" placeholder="Ingrese la fecha" required>
+                </div>
+                <div class="form-group">
+                    <label class="control-label" for="paciente">Paciente:</label>
+                    <input type="text" class="form-control" id="paciente" name="paciente" placeholder="Ingrese el paciente" required>
+                </div>
+                <div class="form-group">
+                    <label class="control-label" for="odontologo">Odontologo:</label>
+                    <input type="text" class="form-control" id="odontologo" name="odontologo" placeholder="Ingrese el odontologo" required>
+                </div>
+                <button type="submit" class="btn btn-danger" id="btn-add-new-turno">Guardar</button>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>

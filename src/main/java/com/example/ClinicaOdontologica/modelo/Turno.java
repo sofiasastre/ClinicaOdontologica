@@ -8,7 +8,7 @@ import java.util.Date;
 @Table(name = "turnos")
 public class Turno {
     @Id
-    @GeneratedValue
+    @GeneratedValue (strategy = GenerationType.IDENTITY)
     private Integer id;
     @ManyToOne
     @JoinColumn(name = "paciente_id", nullable = false)
